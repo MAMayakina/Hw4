@@ -113,6 +113,44 @@ public class Main {
                         break;
                 }
             }
-    }
+        //Доп. задание 6
+        System.out.println("Доп. задание 6:");
+        int age = 25;
+        int salary = 60000;
+        double creditSum = 1;
+        //проверяем возраст
+        if (age>=23){
+              creditSum = salary*3;
+        }
+        else{
+              creditSum = salary*2;
+        }
+        //проверяем з/п
+        if (salary>=50000){
+            creditSum=creditSum*1.2;
+        }
+        else if (salary>=80000){
+            creditSum=creditSum*1.5;
+        }
+        System.out.println("Мы готовы выдать Вам кредитную карту с лимитом  " + creditSum + " рублей.");
 
+        //Доп. задание 7
+        System.out.println("Доп. задание 7:");
+        int wantedSum=330000;
+        double rate = 10;
+        //считаем ставку
+        if (age<23){rate=rate+1;}
+        else if(age<30){rate=rate+0.5;}
+        if (salary >80000){rate=rate-0.7;}
+        //рассчитаем ежемесячный платеж
+        rate=(rate/100)+1;
+        int monthPayment= (int) (wantedSum*rate/12);
+        System.out.print("Максимальный ежемесячный платеж при ЗП "+salary+" рублей равен "+salary/2 +" рублей. Платеж по кредиту "+monthPayment+" рублей. ");
+        if (monthPayment/2>salary){
+            System.out.println("Отказано.");
+        }
+        else {
+            System.out.println("Одобрено.");
+        }
+    }
 }
